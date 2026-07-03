@@ -1,3 +1,5 @@
+import os
+
 from langchain.agents import create_agent
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
@@ -7,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Setup the model first
-llm = ChatMistralAI(model_name="mistral-small-2506")
+llm = ChatMistralAI(model_name="mistral-small-2506",api_key=os.getenv("MISTRALAI_API_KEY"))
 
 
 # Create 1st agent - search agent
