@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Setup the model first
-llm = ChatMistralAI(model_name="mistral-small-2506",api_key=os.getenv("MISTRALAI_API_KEY"))
+llm = ChatMistralAI(model_name="mistral-small-2506",api_key=os.getenv("MISTRAL_API_KEY"))
 
 
 # Create 1st agent - search agent
